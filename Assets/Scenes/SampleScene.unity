@@ -133,9 +133,10 @@ GameObject:
   - component: {fileID: 126166298}
   - component: {fileID: 126166301}
   - component: {fileID: 126166300}
+  - component: {fileID: 126166302}
   m_Layer: 9
   m_Name: racket
-  m_TagString: Untagged
+  m_TagString: recket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -197,8 +198,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 126166297}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: -100, z: -1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -100, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -224,7 +225,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 6
 --- !u!61 &126166301
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -251,6 +252,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 33, y: 10}
   m_EdgeRadius: 0
+--- !u!114 &126166302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126166297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ea4d4e43b79e464992b04230a2c5f8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 100
+  rb: {fileID: 126166300}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,7 +454,7 @@ GameObject:
   - component: {fileID: 1084138791}
   m_Layer: 8
   m_Name: border_right
-  m_TagString: Untagged
+  m_TagString: border_right
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -546,7 +561,7 @@ GameObject:
   - component: {fileID: 1334973498}
   m_Layer: 8
   m_Name: border_top
-  m_TagString: Untagged
+  m_TagString: border_top
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -709,7 +724,7 @@ GameObject:
   - component: {fileID: 1750550251}
   m_Layer: 8
   m_Name: border_left
-  m_TagString: Untagged
+  m_TagString: border_left
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -772,7 +787,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1750550248}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -105, y: 0, z: 0}
+  m_LocalPosition: {x: -107, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

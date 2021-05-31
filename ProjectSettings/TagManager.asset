@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - border_left
+  - border_right
+  - border_top
+  - recket
   layers:
   - Default
   - TransparentFX
