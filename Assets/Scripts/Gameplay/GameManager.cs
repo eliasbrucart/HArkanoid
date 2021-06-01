@@ -4,7 +4,12 @@ public class GameManager : MonoBehaviour
 {
     static public GameManager instanceGameManager;
 
+    static public GameManager Instance { get { return instanceGameManager; } }
+
+    [SerializeField] private int bricksValue;
+
     public int points;
+    public SpawnBricks spawnBricks;
 
     private void Awake()
     {
@@ -20,6 +25,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         Ball.AddPoints += IncreasePoints;
+        Player.IsDead += GameOver;
     }
 
     private void Update()
@@ -27,13 +33,25 @@ public class GameManager : MonoBehaviour
         CheckGameOver();
     }
 
+    private void CheckGameOver()
+    {
+        if (spawnBricks.totalBricks == 0)
+            GameOver();
+    }
+
+    private void GameOver()
+    {
+        ScenesManager.instanceScenesManager.ChangeScene("GameOver");
+    }
+
     private void IncreasePoints()
     {
-        points += 10;
+        points += bricksValue;
     }
 
     private void OnDisable()
     {
         Ball.AddPoints -= IncreasePoints;
+        Player.IsDead -= GameOver;
     }
 }

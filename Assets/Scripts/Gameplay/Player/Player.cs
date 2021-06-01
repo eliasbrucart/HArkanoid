@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class Player : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class Player : MonoBehaviour
     private Rigidbody rb;
 
     private Ball ball;
+
+    static public event Action IsDead;
 
     private void Start()
     {
@@ -54,7 +57,10 @@ public class Player : MonoBehaviour
     {
         lives -= livesToSubtract;
         if (lives <= 0)
+        {
             lives = 0;
+            IsDead?.Invoke();
+        }
     }
 
     private void OnDisable()
