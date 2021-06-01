@@ -25,9 +25,7 @@ public class Ball : MonoBehaviour
     void MoveBall()
     {
         if (isMoving)
-        {
             transform.position += direction * speed * Time.deltaTime;
-        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -58,6 +56,7 @@ public class Ball : MonoBehaviour
         {
             transform.position = initialPosition;
             isMoving = false;
+            direction = transform.forward;
             PlayerSubtractLives?.Invoke();
         }
     }

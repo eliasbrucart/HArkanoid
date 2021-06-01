@@ -47,9 +47,7 @@ public class Player : MonoBehaviour
     void InputPlayer()
     {
         if (Input.GetKeyDown(KeyCode.Space))
-        {
             ball.isMoving = true;
-        }
     }
 
     private void SubtractLives()
