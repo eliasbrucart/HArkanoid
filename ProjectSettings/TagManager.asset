@@ -12,6 +12,7 @@ TagManager:
   - green_brick
   - red_brick
   - yellow_brick
+  - ball
   layers:
   - Default
   - TransparentFX
