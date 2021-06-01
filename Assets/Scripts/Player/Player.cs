@@ -5,12 +5,11 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] private float speed;
-    [SerializeField] private Rigidbody rb;
 
     void FixedUpdate()
     {
         float horizontalInput = Input.GetAxisRaw("Horizontal");
 
-        rb.velocity = Vector3.right * horizontalInput * speed;
+        //rb.velocity = Vector3.right * horizontalInput * speed;
     }
 }
