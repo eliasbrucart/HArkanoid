@@ -7,7 +7,11 @@ TagManager:
   - border_left
   - border_right
   - border_top
-  - recket
+  - racket
+  - blue_brick
+  - green_brick
+  - red_brick
+  - yellow_brick
   layers:
   - Default
   - TransparentFX

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 120987143222930999}
   m_Layer: 0
   m_Name: BlueBrick
-  m_TagString: Untagged
+  m_TagString: blue_brick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

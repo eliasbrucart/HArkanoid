@@ -265,6 +265,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 100
+  lives: 0
+  offsetWithBall: {x: 0, y: 0, z: 0}
 --- !u!1 &523633819
 GameObject:
   m_ObjectHideFlags: 0
@@ -623,13 +625,50 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: -0.70029545, y: -0.0017180291, z: 0.0016781129, w: -0.7138491}
-  m_LocalPosition: {x: 1.9176623, y: 22.938356, z: -0.6965203}
+  m_LocalRotation: {x: -0.7013553, y: -0.00065003755, z: 0.0006439715, w: -0.7128113}
+  m_LocalPosition: {x: 0.08357501, y: 24.443607, z: -0.06089461}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &991214421 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3561379141589077087, guid: 2564d4eb26862ad4983080578650d7d5,
+    type: 3}
+  m_PrefabInstance: {fileID: 3561379142042892042}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &991214422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991214421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c5a66adcd2f6b945ba2f336bf473bce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  initialPosition: {x: 0, y: 0.7, z: -7}
+  isMoving: 0
+--- !u!54 &991214423
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991214421}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 116
+  m_CollisionDetection: 0
 --- !u!1 &1084138790
 GameObject:
   m_ObjectHideFlags: 0
@@ -920,7 +959,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 124
   m_CollisionDetection: 0
 --- !u!1 &1750550248
 GameObject:
@@ -1204,8 +1243,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5968481473113952989, guid: d5f8d6a91edad7143823745c79ddeb83,
         type: 3}
+      propertyPath: lives
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968481473113952989, guid: d5f8d6a91edad7143823745c79ddeb83,
+        type: 3}
       propertyPath: speed
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968481473113952989, guid: d5f8d6a91edad7143823745c79ddeb83,
+        type: 3}
+      propertyPath: offsetWithBall.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968481473113952989, guid: d5f8d6a91edad7143823745c79ddeb83,
+        type: 3}
+      propertyPath: offsetWithBall.z
+      value: -2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5f8d6a91edad7143823745c79ddeb83, type: 3}

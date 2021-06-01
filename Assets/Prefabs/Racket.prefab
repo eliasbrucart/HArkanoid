@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5968481473113952989}
   m_Layer: 0
   m_Name: Racket
-  m_TagString: Untagged
+  m_TagString: racket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,4 +107,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  rb: {fileID: 0}
+  lives: 0
+  offsetWithBall: {x: 0, y: 0, z: 0}
