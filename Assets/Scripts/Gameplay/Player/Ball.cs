@@ -10,6 +10,7 @@ public class Ball : MonoBehaviour
     private Vector3 direction;
 
     static public event Action PlayerSubtractLives;
+    static public event Action AddPoints;
     void Start()
     {
         isMoving = false;
@@ -30,11 +31,15 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "border_top" || collision.gameObject.tag == "border_left" || collision.gameObject.tag == "border_right"
-            || collision.gameObject.tag == "blue_brick" || collision.gameObject.tag == "green_brick" || collision.gameObject.tag == "red_brick" || 
-            collision.gameObject.tag == "yellow_brick")
+        if(collision.gameObject.tag == "border_top" || collision.gameObject.tag == "border_left" || collision.gameObject.tag == "border_right")
                 direction *= -1;
-        if(collision.gameObject.CompareTag("racket"))
+        if(collision.gameObject.tag == "blue_brick" || collision.gameObject.tag == "green_brick" || collision.gameObject.tag == "red_brick" ||
+            collision.gameObject.tag == "yellow_brick")
+        {
+            direction *= -1;
+            AddPoints?.Invoke();
+        }
+        if (collision.gameObject.CompareTag("racket"))
         {
             float x = HitFactor(transform.position, collision.transform.position, collision.collider.bounds.size.x);
 

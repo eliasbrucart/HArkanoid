@@ -55,7 +55,6 @@ public class Player : MonoBehaviour
         lives -= livesToSubtract;
         if (lives <= 0)
             lives = 0;
-        Debug.Log("resto una vida! vidas: " + lives);
     }
 
     private void OnDisable()
