@@ -31,8 +31,12 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "border_top" || collision.gameObject.tag == "border_left" || collision.gameObject.tag == "border_right")
+        if(collision.gameObject.tag == "border_top")
                 direction *= -1;
+        if (collision.gameObject.tag == "border_left")
+            direction += Vector3.right;
+        else if (collision.gameObject.tag == "border_right")
+            direction += -Vector3.right;
         if(collision.gameObject.tag == "blue_brick" || collision.gameObject.tag == "green_brick" || collision.gameObject.tag == "red_brick" ||
             collision.gameObject.tag == "yellow_brick")
         {
