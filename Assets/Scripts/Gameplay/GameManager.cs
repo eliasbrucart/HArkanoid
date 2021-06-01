@@ -8,7 +8,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private int bricksValue;
 
-    public int points;
+    public int score;
+    public int highScore { get; set; }
     public SpawnBricks spawnBricks;
 
     private void Awake()
@@ -24,8 +25,11 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
-        Ball.AddPoints += IncreasePoints;
+        Ball.AddPoints += IncreaseScore;
         Player.IsDead += GameOver;
+        highScore = 0;
+        highScore = PlayerPrefs.GetInt("highScore");
+        Debug.Log("El high score es: " + highScore);
     }
 
     private void Update()
@@ -44,14 +48,19 @@ public class GameManager : MonoBehaviour
         ScenesManager.instanceScenesManager.ChangeScene("GameOver");
     }
 
-    private void IncreasePoints()
+    private void IncreaseScore()
     {
-        points += bricksValue;
+        score += bricksValue;
+        if(score > highScore)
+        {
+            PlayerPrefs.SetInt("highScore", score);
+            PlayerPrefs.Save();
+        }
     }
 
     private void OnDisable()
     {
-        Ball.AddPoints -= IncreasePoints;
+        Ball.AddPoints -= IncreaseScore;
         Player.IsDead -= GameOver;
     }
 }
