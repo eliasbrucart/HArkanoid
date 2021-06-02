@@ -4,7 +4,6 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] private float speed;
-    [SerializeField] private int lives;
     [SerializeField] private Vector3 offsetWithBall;
 
     private int livesToSubtract = 1;
@@ -12,6 +11,8 @@ public class Player : MonoBehaviour
     private Rigidbody rb;
 
     private Ball ball;
+
+    public int lives;
 
     static public event Action IsDead;
 

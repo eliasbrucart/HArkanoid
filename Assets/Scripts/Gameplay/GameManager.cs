@@ -29,7 +29,6 @@ public class GameManager : MonoBehaviour
         Player.IsDead += GameOver;
         highScore = 0;
         highScore = PlayerPrefs.GetInt("highScore");
-        Debug.Log("El high score es: " + highScore);
     }
 
     private void Update()
